@@ -676,7 +676,8 @@ footer .logo span {
   transform: translate(-50%, -50%);
   border-radius: 4px;
   width: 288px;
-  min-height: 623px;
+  max-height: 100%;
+  overflow: auto;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
@@ -815,9 +816,6 @@ footer .logo span {
   gap: 8px;
 }
 
-.check {
-}
-
 .check-icon-wrap {
   left: 24px;
   width: 16px;
@@ -840,8 +838,12 @@ footer .logo span {
   fill: #f4f4fd;
 }
 
+.check:focus-within + .modal-label-ppolicy .check-icon-wrap {
+  border: 1px solid #4d5ae5;
+}
+
 .ppolicy {
-  line-height: 1.33333;
+  line-height: 1.33;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
